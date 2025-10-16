@@ -8,7 +8,7 @@ var blogs = [
         description: "I had to get a closer look",
         image: "takingAPeek.jpg",
         imageAlt: "venturing deeply",
-        slug: "https://www.fortnite.com/?lang=en-US",
+        slug: "https://www.fortnite.com/?lang=en-US"
     },
     {
         title: "At The Game",
@@ -16,25 +16,28 @@ var blogs = [
         description: "Enjoying some baseball during a fine evening",
         image: "atTheGame.jpg",
         imageAlt: "posing for the camera",
-        slug: "https://www.slocounty.ca.gov/departments/human-resources/services/applicants/applying-for-county-employment",
+        slug: "https://www.slocounty.ca.gov/departments/human-resources/services/applicants/applying-for-county-employment"
     }
 ];
 /**
  * Dynamically appends blogs to the webpage using DOM Manipulation.
  */
 var blogContainer = document.getElementById("blog-container");
-blogs.forEach(function (blog) {
-    var title = document.createElement("h1");
-    title.textContent = blog.title;
+blogs.forEach(function (Blog) {
+    var title = document.createElement("h2");
+    title.textContent = Blog.title;
     var image = document.createElement("img");
-    image.src = blog.image;
-    image.alt = blog.imageAlt;
+    image.src = Blog.image;
+    image.alt = Blog.imageAlt;
+    image.style.width = "300px";
+    image.style.height = "auto";
     var date = document.createElement("p");
-    date.textContent = blog.date;
+    date.textContent = Blog.date;
     var description = document.createElement("p");
-    description.textContent = blog.description;
+    description.textContent = Blog.description;
     var slug = document.createElement("a");
-    slug.href = blog.slug;
+    slug.href = Blog.slug;
+    slug.textContent = "Read About It Here";
     var blogDiv = document.createElement("div");
     blogDiv.classList.add("blog-post");
     blogDiv.appendChild(title);
