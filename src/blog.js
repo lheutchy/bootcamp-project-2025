@@ -36,7 +36,7 @@ blogs.forEach(function (Blog) {
     var description = document.createElement("p");
     description.textContent = Blog.description;
     var slug = document.createElement("a");
-    slug.href = 'blogs/${Blog.slug}.html';
+    slug.href = "blogs/".concat(Blog.slug, ".html");
     slug.textContent = "Read About It Here";
     var blogDiv = document.createElement("div");
     blogDiv.classList.add("blog-post");

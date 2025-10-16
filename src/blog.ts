@@ -60,7 +60,7 @@ blogs.forEach((Blog) =>{
     description.textContent = Blog.description;
 
     const slug = document.createElement("a");
-    slug.href = 'blogs/${Blog.slug}.html';
+    slug.href = `blogs/${Blog.slug}.html`;
     slug.textContent = "Read About It Here";
 
     const blogDiv = document.createElement("div");
