@@ -23,19 +23,19 @@ type Blog = {
 const blogs: Blog[] = [
   {
     title: "Taking A Peek",
-    date: "??/??/20??",
+    date: "09/22/2011",
     description: "I had to get a closer look",
     image: "takingAPeek.jpg",
     imageAlt: "venturing deeply",
-    slug: "https://www.fortnite.com/?lang=en-US"
+    slug: "taking-a-peek"
   },
   {
     title: "At The Game",
-    date: "??/??/20??",
+    date: "07/30/2012",
     description: "Enjoying some baseball during a fine evening",
     image: "atTheGame.jpg",
     imageAlt: "posing for the camera",
-    slug: "https://www.slocounty.ca.gov/departments/human-resources/services/applicants/applying-for-county-employment"
+    slug: "at-the-game"
   }
 ];
 
@@ -60,8 +60,8 @@ blogs.forEach((Blog) =>{
     description.textContent = Blog.description;
 
     const slug = document.createElement("a");
-    slug.href = Blog.slug;
-    slug.textContent = "Read About It Here"
+    slug.href = 'blogs/${Blog.slug}.html';
+    slug.textContent = "Read About It Here";
 
     const blogDiv = document.createElement("div");
     blogDiv.classList.add("blog-post");

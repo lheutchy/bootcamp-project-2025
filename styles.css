@@ -162,3 +162,12 @@ html {
 main {
   flex: 1;
 }
+
+.blog-post {
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+#blog-container {
+  margin-top: 40px;
+}
