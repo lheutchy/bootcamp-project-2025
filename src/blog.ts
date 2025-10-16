@@ -43,22 +43,22 @@ const blogs: Blog[] = [
  * Dynamically appends blogs to the webpage using DOM Manipulation.
  */
 const blogContainer = document.getElementById("blog-container");
-blogs.forEach((blog) =>{
+blogs.forEach((Blog) =>{
     const title = document.createElement("h1");
-    title.textContent = blog.title
+    title.textContent = Blog.title
 
     const image = document.createElement("img");
-    image.src = blog.image;
-    image.alt = blog.imageAlt;
+    image.src = Blog.image;
+    image.alt = Blog.imageAlt;
 
     const date = document.createElement("p");
-    date.textContent = blog.date;
+    date.textContent = Blog.date;
 
     const description = document.createElement("p");
-    description.textContent = blog.description;
+    description.textContent = Blog.description;
 
     const slug = document.createElement("a");
-    slug.href = blog.slug;
+    slug.href = Blog.slug;
     slug.textContent = "Read About It Here"
 
     const blogDiv = document.createElement("div");
