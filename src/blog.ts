@@ -59,6 +59,7 @@ blogs.forEach((blog) =>{
 
     const slug = document.createElement("a");
     slug.href = blog.slug;
+    slug.textContent = "Read About It Here"
 
     const blogDiv = document.createElement("div");
     blogDiv.classList.add("blog-post");
