@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Declares an array named `blogs`.
  */
-const blogs = [
+var blogs = [
     {
         title: "Taking A Peek",
         date: "09/22/2011",
@@ -24,29 +22,28 @@ const blogs = [
 /**
  * Dynamically appends blogs to the webpage using DOM Manipulation.
  */
-const blogContainer = document.getElementById("blog-container");
-blogs.forEach((Blog) => {
-    const title = document.createElement("h2");
+var blogContainer = document.getElementById("blog-container");
+blogs.forEach(function (Blog) {
+    var title = document.createElement("h2");
     title.textContent = Blog.title;
-    const image = document.createElement("img");
+    var image = document.createElement("img");
     image.src = Blog.image;
     image.alt = Blog.imageAlt;
     image.style.width = "300px";
     image.style.height = "auto";
-    const date = document.createElement("p");
+    var date = document.createElement("p");
     date.textContent = Blog.date;
-    const description = document.createElement("p");
+    var description = document.createElement("p");
     description.textContent = Blog.description;
-    const slug = document.createElement("a");
-    slug.href = `blogs/${Blog.slug}.html`;
+    var slug = document.createElement("a");
+    slug.href = "blogs/".concat(Blog.slug, ".html");
     slug.textContent = "Read About It Here";
-    const blogDiv = document.createElement("div");
+    var blogDiv = document.createElement("div");
     blogDiv.classList.add("blog-post");
     blogDiv.appendChild(title);
     blogDiv.appendChild(image);
     blogDiv.appendChild(date);
     blogDiv.appendChild(description);
     blogDiv.appendChild(slug);
-    blogContainer?.appendChild(blogDiv);
+    blogContainer === null || blogContainer === void 0 ? void 0 : blogContainer.appendChild(blogDiv);
 });
-//# sourceMappingURL=blog.js.map
