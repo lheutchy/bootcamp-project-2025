@@ -27,7 +27,7 @@ const blogs: Blog[] = [
     description: "I had to get a closer look",
     image: "takingAPeek.jpg",
     imageAlt: "venturing deeply",
-    slug: "https://www.fortnite.com/?lang=en-US",
+    slug: "https://www.fortnite.com/?lang=en-US"
   },
   {
     title: "At The Game",
@@ -35,7 +35,7 @@ const blogs: Blog[] = [
     description: "Enjoying some baseball during a fine evening",
     image: "atTheGame.jpg",
     imageAlt: "posing for the camera",
-    slug: "https://www.slocounty.ca.gov/departments/human-resources/services/applicants/applying-for-county-employment",
+    slug: "https://www.slocounty.ca.gov/departments/human-resources/services/applicants/applying-for-county-employment"
   }
 ];
 
@@ -44,12 +44,14 @@ const blogs: Blog[] = [
  */
 const blogContainer = document.getElementById("blog-container");
 blogs.forEach((Blog) =>{
-    const title = document.createElement("h1");
+    const title = document.createElement("h2");
     title.textContent = Blog.title
 
     const image = document.createElement("img");
     image.src = Blog.image;
     image.alt = Blog.imageAlt;
+    image.style.width = "300px";
+    image.style.height = "auto";
 
     const date = document.createElement("p");
     date.textContent = Blog.date;
