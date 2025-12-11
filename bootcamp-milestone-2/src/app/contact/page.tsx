@@ -19,8 +19,6 @@ export default function Contact() {
               <input className={style.submit} type="submit" />
           </form>
         </main>
-        
-        <footer className = {"footer"}>© 2025 Lorinc's Website | All Rights Reserved</footer>
     </>
   );
 }

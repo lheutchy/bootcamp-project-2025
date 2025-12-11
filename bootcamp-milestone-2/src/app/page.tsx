@@ -23,7 +23,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className = {"footer"}>© 2025 Lorinc's Website | All Rights Reserved</footer>
     </>
   );
 }

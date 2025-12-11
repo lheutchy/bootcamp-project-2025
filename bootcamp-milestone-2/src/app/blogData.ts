@@ -1,4 +1,6 @@
-export interface Blog {
+//MAYBE DELETE??????
+
+/*export interface Blog {
   title: string;
   date: string;
   description: string;
@@ -7,7 +9,7 @@ export interface Blog {
   slug: string;
 }
 
-const blogs: Blog[] = [
+/*const blogs: Blog[] = [
   {
     title: "Taking A Peek",
     date: "09/22/2011",
@@ -26,4 +28,4 @@ const blogs: Blog[] = [
   }
 ];
 
-export default blogs;
+export default blogs;*/
