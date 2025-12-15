@@ -7,7 +7,6 @@
   --footer-height: 72px;
 }
 
-/*--Prevents horizontal scrolling--*/
 *,
 *::before,
 *::after {
@@ -17,16 +16,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--black);
   color: var(--grey);
-}
-
-#__next {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 main {
@@ -55,8 +47,4 @@ a {
 
 a:hover {
   color: var(--teal);
-}
-
-.container {
-  padding-bottom:60px;
 }

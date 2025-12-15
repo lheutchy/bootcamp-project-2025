@@ -9,9 +9,8 @@ export default function BlogPreview(props: Blog) {
   const src = props.image.startsWith("/") ? props.image : `/images/${props.image}`;
 
   return (
-    <div>
-      <h3>{props.title}</h3>
-      <div>
+    <div className={style.card}>
+      <div className={style.imageWrapper}>
         <Image 
           src={src}
           alt="img"
@@ -19,12 +18,18 @@ export default function BlogPreview(props: Blog) {
           height={99999}
           style={{ width: "100%", height: "auto", maxWidth: "500px" }}
         />
-        <p>{props.description}</p>
-				<p>{props.date.toDateString()}</p>
-        <Link href={`/blogs/${props.slug}`}>
-          Learn More
-        </Link>
       </div>
-	  </div>
+
+      <div className={style.content}>
+        <h3 className={style.title}>{props.title}</h3>
+        <p className={style.date}>{props.date.toDateString()}</p>
+        <p className={style.description}>{props.description}</p>
+
+        <Link className={style.link} href={`/blogs/${props.slug}`}>
+          Read More
+        </Link>
+        
+      </div>
+    </div>
   );
 }
