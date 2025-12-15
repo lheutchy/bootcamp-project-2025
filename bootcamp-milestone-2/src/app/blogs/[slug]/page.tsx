@@ -1,12 +1,9 @@
-// src/app/blogs/[slug]/page.tsx
 import Image from 'next/image'
-import Link from 'next/link'
 import connectDB from '@/database/db'
 import blogSchema from '@/database/blogSchema'
 import Blog from '@/database/blogSchema'
 import Comment from '@/components/comment'
 import { IComment } from '@/components/comment'
-//import { Blog } from '@/app/blogData'
 
 type Props = { params: { slug: string } }
 
@@ -43,7 +40,7 @@ export default async function BlogPage({ params }: Props) {
     )
   }
 
-  const imageSrc = blog?.image && blog.image.startsWith('/') ? blog.image : `/images/${blog?.image ?? 'default.jpg'}`
+  const imageSrc = blog.image && blog.image.startsWith('/') ? blog.image : `/images/${blog?.image ?? 'default.jpg'}`
 
   return (
     <main>
