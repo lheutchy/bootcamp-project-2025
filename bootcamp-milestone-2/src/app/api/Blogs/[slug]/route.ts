@@ -38,8 +38,7 @@ type IParams = {
 	We need to include req, even though we don't use it here, so that we can access
 	the second argument
 */
-export async function GET(req: NextRequest, context: IParams) {
-	const { params } = context;
+export async function GET(req: NextRequest, { params }: { params: { slug: string } } ) {
 		// If { params } looks confusing, check the note below this code block
 		
     await connectDB() // function from db.ts before
